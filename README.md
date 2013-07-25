@@ -21,78 +21,82 @@ Pull requests are welcome!
 Supported stuff
 ---------------
 
-- Array
-  - from JavaScript
-    - `concat(Array)` (only takes an array, unlike JavaScript)
-    - `indexOf(item)`
-    - `join([string])`
-    - `lastIndexOf(item)`
-    - `length()` (method, not a property)
-    - `pop()`
-    - `push(item)` (only takes one argument, unlike JavaScript)
-    - `reverse()`
-    - `shift()`
-    - `slice()`
-    - `sort`
-    - `splice(index, howMany)` (always takes two arguments, unlike JavaScript)
-    - `toString()`
-    - `unshift(item)` (only takes one argument, unlike JavaScript)
-  - new stuff
-    - `contains(item)`
-    - `isEmpty()`
-    - `size()` (alias of `length`)
+### Array
 
-- String
-  - from JavaScript
-    - `charAt(index)`
-    - `charCodeAt(index)`
-    - `concat(string)`
-    - `contains(string)` (strings only
-    - `endsWith(string)` (strings only)
-    - `indexOf(string)` (strings only)
-    - `lastIndexOf(string)` (strings only)
-    - `length()` (method, not a property)
-    - `replace(original, new)` (strings only. Try `replaceAll` for global replace)
-    - `slice`
-    - `split` (returns a JSCPP::Array)
-    - `startsWith(string)`
-    - `substr`
-    - `substring`
-    - `toLowerCase()`
-    - `toUpperCase()`
-    - `trim()`
-    - `trimLeft()`
-    - `trimRight()`
-  - new stuff
-    - `isEmpty()` (shorthand for `length() == 0`)
-    - `repeat(amount)` (repeat a string)
-    - `replaceAll(original, new)` (same API as `replace` but global)
-    - `size()` (alias of `length`)
-    - `toStdString()` (convert to std::string)
+- from JavaScript
+  - `concat(Array)` (only takes an array, unlike JavaScript)
+  - `indexOf(item)`
+  - `join([string])`
+  - `lastIndexOf(item)`
+  - `length()` (method, not a property)
+  - `pop()`
+  - `push(item)` (only takes one argument, unlike JavaScript)
+  - `reverse()`
+  - `shift()`
+  - `slice()`
+  - `sort`
+  - `splice(index, howMany)` (always takes two arguments, unlike JavaScript)
+  - `toString()`
+  - `unshift(item)` (only takes one argument, unlike JavaScript)
+- new stuff
+  - `contains(item)`
+  - `isEmpty()`
+  - `size()` (alias of `length`)
 
-- Number
-  - from JavaScript
-    - `toString`
-  - new stuff
-    - `toInt`
-    - `toUnsignedInt`
-    - `toFloat`
-    - `toDouble`
+### String
 
-- Math
-  - from JavaScript
-    - `E`, `LN2`, `LN10`, `LOG2E`, `LOG10E`, `PI`, `SQRT1_2`, `SQRT2`
-    - `abs`
-    - `acos`, `asin`, `atan`, `atan2`
-    - `ceil`, `floor`
-    - `sin`, `cos`, `tan`
-    - `exp`
-    - `round`
-    - `log`
-    - `max`, `min`
-    - `pow`
-    - `random`
-    - `sqrt`
+- from JavaScript
+  - `charAt(index)`
+  - `charCodeAt(index)`
+  - `concat(string)`
+  - `contains(string)` (strings only
+  - `endsWith(string)` (strings only)
+  - `indexOf(string)` (strings only)
+  - `lastIndexOf(string)` (strings only)
+  - `length()` (method, not a property)
+  - `replace(original, new)` (strings only. Try `replaceAll` for global replace)
+  - `slice`
+  - `split` (returns a JSCPP::Array)
+  - `startsWith(string)`
+  - `substr`
+  - `substring`
+  - `toLowerCase()`
+  - `toUpperCase()`
+  - `trim()`
+  - `trimLeft()`
+  - `trimRight()`
+- new stuff
+  - `isEmpty()` (shorthand for `length() == 0`)
+  - `repeat(amount)` (repeat a string)
+  - `replaceAll(original, new)` (same API as `replace` but global)
+  - `size()` (alias of `length`)
+  - `toStdString()` (convert to std::string)
+
+### Number
+
+- from JavaScript
+  - `toString`
+- new stuff
+  - `toInt`
+  - `toUnsignedInt`
+  - `toFloat`
+  - `toDouble`
+
+### Math
+
+- from JavaScript
+  - `E`, `LN2`, `LN10`, `LOG2E`, `LOG10E`, `PI`, `SQRT1_2`, `SQRT2`
+  - `abs`
+  - `acos`, `asin`, `atan`, `atan2`
+  - `ceil`, `floor`
+  - `sin`, `cos`, `tan`
+  - `exp`
+  - `round`
+  - `log`
+  - `max`, `min`
+  - `pow`
+  - `random`
+  - `sqrt`
 
 Usage
 -----
