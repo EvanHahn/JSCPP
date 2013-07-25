@@ -35,6 +35,9 @@ namespace JSCPP {
 
 			// valueOf: not implemented
 
+			T& first() { return realVector[0]; }
+			T& last() { return realVector[size() - 1]; };
+
 			bool isEmpty() { return length() == 0; }
 
 	};
