@@ -1,5 +1,7 @@
-JS.cpp
-======
+JSCPP
+=====
+
+<img src="logos/jscpp.png" style="float:right; width: 150px; margin-left: 1em;">
 
 I'm a JavaScript programmer. I *hate* C++. Sadly, I have to use it for school. I come from a world of "performance be damned" and high-level APIs.
 
