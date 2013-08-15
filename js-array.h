@@ -21,9 +21,23 @@ namespace JSCPP {
 			template <T> friend std::ostream& operator<<(std::ostream&, Array<T>&);
 
 			unsigned int length() { return realVector.size(); }
-			unsigned int size()   { return realVector.size(); }
+			unsigned int size()   { return length(); }
 
-			// TODO: sort
+			int indexOf(T el) {
+				for (unsigned int i = 0; i < size(); i ++) {
+					if (at(i) == el)
+						return i;
+				}
+				return -1;
+			}
+
+			int lastIndexOf(T el) {
+				for (unsigned int i = size() - 1; i >= 0; i --) {
+					if (at(i) == el)
+						return i;
+				}
+				return -1;
+			}
 
 			void push(T el) { realVector.push_back(el); }
 			void unshift(T el) { realVector.insert(realVector.begin(), el); }
@@ -56,6 +70,8 @@ namespace JSCPP {
 
 			T& first() { return at(0); }
 			T& last() { return at(size() - 1); };
+
+			bool contains(T el) { return indexOf(el) != -1; }
 
 			bool isEmpty() { return length() == 0; }
 

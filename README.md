@@ -28,9 +28,9 @@ Supported stuff
 from JavaScript
 
 - `concat(Array)` (only takes an array, unlike JavaScript)
-- `indexOf(item)` (*TODO*)
+- `indexOf(item)`
 - `join([string])`
-- `lastIndexOf(item)` (*TODO*)
+- `lastIndexOf(item)`
 - `length()` (method, not a property)
 - `pop()`
 - `push(item)` (only takes one argument, unlike JavaScript)
@@ -45,6 +45,7 @@ from JavaScript
 new stuff
 
 - `isEmpty()` (alias of `length() == 0`)
+- `contains(item)` (alias of `indexOf(item) != -1`)
 - `first()` (get the first element)
 - `last()` (get the last element)
 - `size()` (alias of `length`)

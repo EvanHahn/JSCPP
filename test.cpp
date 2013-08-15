@@ -34,12 +34,23 @@ int main() {
 		{ // Find stuff inside
 		  // -----------------
 
-			Array<int> empty;
-			assert(empty.isEmpty());
-			assert(empty.length() == 0);
-			assert(empty.size() == 0);
-			assert(!empty[0]);
-			assert(!empty[2]);
+			Array<int> arr;
+			assert(arr.indexOf(12) == -1);
+			assert(arr.indexOf(420) == -1);
+			assert(arr.indexOf(666) == -1);
+			assert(!arr.contains(12));
+			assert(!arr.contains(420));
+			assert(!arr.contains(666));
+
+			arr.push(12);
+			arr.push(420);
+			arr.push(666);
+			assert(arr.indexOf(12) == 0);
+			assert(arr.indexOf(420) == 1);
+			assert(arr.indexOf(666) == 2);
+			assert(arr.lastIndexOf(12) == 0);
+			assert(arr.lastIndexOf(420) == 1);
+			assert(arr.lastIndexOf(666) == 2);
 
 		}
 
