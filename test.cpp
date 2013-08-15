@@ -178,6 +178,20 @@ int main() {
 
 		}
 
+		{ // Replace
+		  // -------
+
+			String sd = "Saint Diego";
+			assert(sd.replace("i", "a") == "Saant Diego");
+			assert(sd.replace("Saint", "San") == "San Diego");
+			assert(sd.replace("Saint Diego", "San Diago") == "San Diago");
+			assert(sd.replaceAll("i", "a") == "Saant Daego");
+			assert(sd.replaceAll("Saint", "San") == "San Diego");
+			assert(sd.replaceAll("Saint Diego", "San Diago") == "San Diago");
+			assert(sd == "Saint Diego");
+
+		}
+
 		{ // Using some more obscure operators
 		  // ---------------------------------
 

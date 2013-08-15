@@ -80,8 +80,13 @@ namespace JSCPP {
 			// match: not implemented
 
 			String replace(const String& needle, const String& replacement) {
-				// TODO
-				return "";
+				std::string result = realString;
+				std::size_t index = result.find(needle.realString);
+				unsigned int needleSize = needle.realString.size();
+				if (index != std::string::npos) {
+					result.replace(index, needleSize, replacement.realString);
+				}
+				return String(result);
 			}
 
 			String replaceAll(const String& needle, const String& replacement) {
@@ -167,7 +172,10 @@ namespace JSCPP {
 
 	};
 
-	std::ostream& operator<<(std::ostream& out, String& str) { out << str.realString; }
+	std::ostream& operator<<(std::ostream& out, String& str) {
+		out << str.realString;
+		return out;
+	}
 
 };
 
