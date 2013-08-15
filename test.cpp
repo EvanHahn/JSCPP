@@ -1,6 +1,7 @@
 #include "js-array.h"
 #include "js-string.h"
 #include "js-math.h"
+#include "js-util.h"
 
 #include <assert.h>
 #include <string>
@@ -309,6 +310,19 @@ int main() {
 	// =========
 
 	{
+
+		{ // parseInt
+		  // --------
+
+			using JSCPP::parseInt;
+
+			assert(parseInt("420") == 420);
+			assert(parseInt("3.14159") == 3);
+			assert(parseInt("8 is a cool number") == 8);
+			assert(parseInt("But 12 is cooler") == 0);
+			assert(parseInt("But 12 is cooler") == 0);
+
+		}
 
 	}
 

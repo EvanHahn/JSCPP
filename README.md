@@ -74,16 +74,6 @@ Supported stuff
   - `size()` (alias of `length`)
   - `toStdString()` (convert to std::string)
 
-### Number
-
-- from JavaScript
-  - `toString`
-- new stuff
-  - `toInt`
-  - `toUnsignedInt`
-  - `toFloat`
-  - `toDouble`
-
 ### Math
 
 - from JavaScript
@@ -99,6 +89,11 @@ Supported stuff
   - `pow`
   - `random`
   - `sqrt`
+
+### Utils
+
+- from JavaScript
+  - `parseInt` (alias of `atoi`; not 100% compliant with JavaScript)
 
 Usage
 -----
