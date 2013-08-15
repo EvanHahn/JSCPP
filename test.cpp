@@ -192,6 +192,25 @@ int main() {
 
 		}
 
+		{ // Slice, substr, and substring
+		  // ----------------------------
+		  // Examples taken from MDN:
+		  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+
+			String str = "The morning is upon us.";
+			assert(str.slice(2, 0) == "");
+			assert(str.slice(-2, 0) == "");
+			assert(str.slice(2, 8) == "e morn");
+			assert(str.slice(4, -2) == "morning is upon u");
+			assert(str.slice(4, 3) == "");
+			assert(str.slice(4, 0) == "");
+			assert(str.slice(-3) == "us.");
+			assert(str.slice(-3, -1) == "us");
+			assert(str.slice(0, -1) == "The morning is upon us");
+			assert(str == "The morning is upon us.");
+
+		}
+
 		{ // Using some more obscure operators
 		  // ---------------------------------
 

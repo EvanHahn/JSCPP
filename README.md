@@ -62,7 +62,7 @@ from JavaScript
 - `lastIndexOf(string)` (strings only)
 - `length()` (method, not a property)
 - `replace(original, new)` (strings only. Try `replaceAll` for global replace)
-- `slice`
+- `slice(beginSlice, [endSlice])`
 - `split` (returns a JSCPP::Array)
 - `startsWith(string)`
 - `substr`

@@ -99,8 +99,19 @@ namespace JSCPP {
 			// search: not implemented
 
 			String slice(int beginSlice, int endSlice) {
-				// TODO
-				return "";
+				String result = "";
+				int start, finish;
+				if (beginSlice < 0)
+					start = length() + beginSlice;
+				else
+					start = beginSlice;
+				if (endSlice < 0)
+					finish = length() + endSlice;
+				else
+					finish = endSlice;
+				for (int i = start; i < finish; i ++)
+					result += charAt(i);
+				return result;
 			}
 			String slice(int beginSlice) { return slice(beginSlice, length()); }
 
