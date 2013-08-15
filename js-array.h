@@ -75,6 +75,8 @@ namespace JSCPP {
 
 			bool isEmpty() { return length() == 0; }
 
+			std::vector<T> toStdVector() { return realVector; }
+
 	};
 
 	template <class T> std::ostream& operator<<(std::ostream& out, Array<T>& arr) {

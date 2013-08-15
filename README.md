@@ -49,6 +49,7 @@ new stuff
 - `first()` (get the first element)
 - `last()` (get the last element)
 - `size()` (alias of `length`)
+- `toStdVector()` (returns a std::vector)
 
 ### String
 

@@ -90,8 +90,8 @@ int main() {
 
 		}
 
-		{ // Turn the array into a string
-		  // ----------------------------
+		{ // Turn the array into other stuff
+		  // -------------------------------
 
 			Array<int> arr;
 			assert(arr.join() == "");
@@ -105,6 +105,10 @@ int main() {
 			assert(arr.join(" - ") == "12 - 420 - 666");
 			assert(arr.join("") == "12420666");
 			assert(arr.toString() == "12,420,666");
+
+			std::vector<int> vec = arr.toStdVector();
+			assert(vec.size() == 3);
+			assert(vec.front() == 12);
 
 		}
 
