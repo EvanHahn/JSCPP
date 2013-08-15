@@ -25,6 +25,7 @@ int main() {
 			Array<int> empty;
 			assert(empty.isEmpty());
 			assert(empty.length() == 0);
+			assert(empty.size() == 0);
 			assert(!empty[0]);
 			assert(!empty[2]);
 
