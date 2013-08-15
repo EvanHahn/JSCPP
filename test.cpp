@@ -31,6 +31,72 @@ int main() {
 
 		}
 
+		{ // Find stuff inside
+		  // -----------------
+
+			Array<int> empty;
+			assert(empty.isEmpty());
+			assert(empty.length() == 0);
+			assert(empty.size() == 0);
+			assert(!empty[0]);
+			assert(!empty[2]);
+
+		}
+
+		{ // Mutate the array
+		  // ----------------
+
+			Array<int> arr;
+			assert(arr.isEmpty());
+
+			arr.push(12);
+			arr.push(420);
+			arr.push(666);
+			assert(!arr.isEmpty());
+			assert(arr.length() == 3);
+			assert(arr.size() == 3);
+			assert(arr[0] == 12);
+			assert(arr[1] == 420);
+			assert(arr[2] == 666);
+
+			assert(arr.pop() == 666);
+			assert(arr.length() == 2);
+			assert(arr.size() == 2);
+			assert(arr[0] == 12);
+			assert(arr[1] == 420);
+			assert(!arr[2]);
+
+			assert(arr.shift() == 12);
+			assert(arr[0] == 420);
+			assert(!arr[1]);
+			assert(!arr[2]);
+			assert(arr.size() == 1);
+
+			arr.unshift(69);
+			assert(arr[0] == 69);
+			assert(arr[1] == 420);
+			assert(arr.size() == 2);
+
+		}
+
+		{ // Turn the array into a string
+		  // ----------------------------
+
+			Array<int> arr;
+			assert(arr.join() == "");
+			assert(arr.join(",") == "");
+			assert(arr.toString() == "");
+
+			arr.push(12);
+			arr.push(420);
+			arr.push(666);
+			assert(arr.join() == "12,420,666");
+			assert(arr.join(" - ") == "12 - 420 - 666");
+			assert(arr.join("") == "12420666");
+			assert(arr.toString() == "12,420,666");
+
+		}
+
 	}
 
 	// STRING

@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <sstream>
 #include <ostream>
 
 namespace JSCPP {
@@ -12,10 +13,11 @@ namespace JSCPP {
 
 		private:
 			std::vector<T> realVector;
+			T at(const unsigned int i) { return (i < size()) ? realVector[i] : NULL; }
 
 		public:
 
-			T operator[](const unsigned int i) { return (i < size()) ? realVector[i] : NULL; }
+			T operator[](const unsigned int i) { return at(i); }
 			template <T> friend std::ostream& operator<<(std::ostream&, Array<T>&);
 
 			unsigned int length() { return realVector.size(); }
@@ -23,12 +25,37 @@ namespace JSCPP {
 
 			// TODO: sort
 
-			std::string toString() { return ","; }
+			void push(T el) { realVector.push_back(el); }
+			void unshift(T el) { realVector.insert(realVector.begin(), el); }
+
+			T pop() {
+				T result = realVector.back();
+				realVector.pop_back();
+				return result;
+			}
+
+			T shift() {
+				T result = realVector.front();
+				realVector.erase(realVector.begin());
+				return result;
+			}
+
+			std::string join(std::string sep) {
+				std::stringstream ss;
+				for (unsigned int i = 0; i < size(); i ++) {
+					if (i != 0)
+						ss << sep;
+					ss << at(i);
+				}
+				return ss.str();
+			}
+			std::string join() { return join(","); }
+			std::string toString() { return join(); }
 
 			// valueOf: not implemented
 
-			T& first() { return realVector[0]; }
-			T& last() { return realVector[size() - 1]; };
+			T& first() { return at(0); }
+			T& last() { return at(size() - 1); };
 
 			bool isEmpty() { return length() == 0; }
 

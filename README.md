@@ -29,18 +29,18 @@ from JavaScript
 
 - `concat(Array)` (only takes an array, unlike JavaScript)
 - `indexOf(item)` (*TODO*)
-- `join([string])` (*TODO*)
+- `join([string])`
 - `lastIndexOf(item)` (*TODO*)
 - `length()` (method, not a property)
-- `pop()` (*TODO*)
-- `push(item)` (*TODO*, only takes one argument, unlike JavaScript)
+- `pop()`
+- `push(item)` (only takes one argument, unlike JavaScript)
 - `reverse()` (*TODO*)
-- `shift()` (*TODO*)
+- `shift()`
 - `slice()` (*TODO*)
 - `sort()` (*TODO*)
 - `splice(index, howMany)` (always takes two arguments, unlike JavaScript)
-- `toString()` (*TODO*)
-- `unshift(item)` (*TODO*, only takes one argument, unlike JavaScript)
+- `toString()`
+- `unshift(item)` (only takes one argument, unlike JavaScript)
 
 new stuff
 
