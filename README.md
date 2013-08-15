@@ -52,6 +52,7 @@ new stuff
 
 from JavaScript
 
+- operators: `==`, `+`, `+=`, `[]` (not for assignment), `!`, `<`, `>`, `<=`, `=>`, `~`
 - `charAt(index)`
 - `charCodeAt(index)`
 - `concat(string)`
