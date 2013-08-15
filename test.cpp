@@ -69,6 +69,7 @@ int main() {
 
 			String name = "Champ Kind";
 			std::string stdname = name.toStdString();
+			assert(stdname == "Champ Kind");
 
 		}
 
