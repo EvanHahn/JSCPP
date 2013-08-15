@@ -86,7 +86,7 @@ from JavaScript
 
 - `E`, `LN2`, `LN10`, `LOG2E`, `LOG10E`, `PI`, `SQRT1_2`, `SQRT2`
 - `abs(value)`
-- `acos(value)`, `asin(value)`, `atan(value)`, `atan2(value)`
+- `acos(value)`, `asin(value)`, `atan(value)`, `atan2(x, y)`
 - `ceil(value)`, `floor(value)`
 - `sin(value)`, `cos(value)`, `tan(value)`
 - `exp(value)`
