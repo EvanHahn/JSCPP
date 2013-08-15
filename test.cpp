@@ -39,7 +39,7 @@ int main() {
 		using JSCPP::String;
 
 		{ // Creating strings
-			// ----------------
+		  // ----------------
 
 			String empty;
 			assert(empty == "");
@@ -64,7 +64,7 @@ int main() {
 		}
 
 		{ // Converting to std::string
-			// -------------------------
+		  // -------------------------
 
 			String name = "Champ Kind";
 			std::string stdname = name.toStdString();
@@ -72,7 +72,7 @@ int main() {
 		}
 
 		{ // Combining strings
-			// -----------------
+		  // -----------------
 
 			String firstName, lastName, name;
 			firstName = "Brian";
@@ -116,7 +116,7 @@ int main() {
 		}
 
 		{ // Find things within a string
-			// ---------------------------
+		  // ---------------------------
 
 			String name = "Channel 4 News Team";
 
@@ -141,7 +141,7 @@ int main() {
 		}
 
 		{ // Trimming
-			// --------
+		  // --------
 
 			assert(String("Hello world").trim() == "Hello world");
 			assert(String("Hello world").trimLeft() == "Hello world");
@@ -165,7 +165,7 @@ int main() {
 		}
 
 		{ // Upper and lowercase
-			// -------------------
+		  // -------------------
 
 			String hi = "Good evening, San Diego. I'm Ron Burgundy?";
 			assert(hi.toLowerCase() == "good evening, san diego. i'm ron burgundy?");
@@ -177,7 +177,7 @@ int main() {
 		}
 
 		{ // Using some more obscure operators
-			// ---------------------------------
+		  // ---------------------------------
 
 			String h = "hello";
 			String w = "world";
