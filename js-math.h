@@ -73,6 +73,13 @@ namespace JSCPP {
 				return std::rand() / RAND_MAX;
 			}
 
+			int sign(double d) {
+				if (d == 0)
+					return 0;
+				else
+					return d / abs(d);
+			}
+
 	};
 
 	MathConstructor Math;

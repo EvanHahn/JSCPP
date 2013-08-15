@@ -305,6 +305,17 @@ int main() {
 			}
 		}
 
+		{
+			assert(Math.sign(0) == 0);
+			assert(Math.sign(0.0) == 0);
+			assert(Math.sign(1.0) == 1);
+			assert(Math.sign(2.0) == 1);
+			assert(Math.sign(6.9) == 1);
+			assert(Math.sign(-1.0) == -1);
+			assert(Math.sign(-2.0) == -1);
+			assert(Math.sign(-6.9) == -1);
+		}
+
 	}
 
 	// UTILITIES
