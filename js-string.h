@@ -1,115 +1,11 @@
-#ifndef JSCPP_H__
-#define JSCPP_H__
+#ifndef JSCPP_STRING_H__
+#define JSCPP_STRING_H__
 
-#include <vector>
 #include <string>
 #include <string.h>
 #include <ostream>
-#include <math.h>
 
 namespace JSCPP {
-
-	template <class T> class Array;
-	class Number;
-	class String;
-	class MathConstructor;
-	class ConsoleContructor;
-
-	template <class T>
-	class Array {
-
-		private:
-			std::vector<T> realVector;
-
-		public:
-
-			T operator[](const unsigned int i) { return (i < size()) ? realVector[i] : NULL; }
-			template <T> friend std::ostream& operator<<(std::ostream&, Array<T>&);
-
-			unsigned int length() { return realVector.size(); }
-			unsigned int size()   { return realVector.size(); }
-
-			// TODO: sort
-
-			String toString() { return join(","); }
-
-			// valueOf: not implemented
-
-			T& first() { return realVector[0]; }
-			T& last() { return realVector[size() - 1]; };
-
-			bool isEmpty() { return length() == 0; }
-
-	};
-
-	template <class T> std::ostream& operator<<(std::ostream& out, Array<T>& arr) {
-		out << '[' << arr.join(", ") << ']';
-	}
-
-	class Number {
-
-		private:
-			double realDouble;
-
-		public:
-
-			Number()                     { realDouble = 0; }
-			Number(const int n)          { realDouble = (double) n; }
-			Number(const float n)        { realDouble = (double) n; }
-			Number(const double n)       { realDouble = n; }
-			Number(const unsigned int n) { realDouble = (double) n; }
-
-			// TODO: all of these
-			bool operator==(const Number& other);
-			Number operator+(const Number& other);
-			Number operator-(const Number& other);
-			Number operator*(const Number& other);
-			Number operator/(const Number& other);
-			Number operator%(const Number& other);
-			Number operator&(const Number& other);
-			Number operator^(const Number& other);
-			Number operator<<(const Number& other);
-			Number operator>>(const Number& other);
-			void operator+=(const Number& other);
-			void operator-=(const Number& other);
-			void operator*=(const Number& other);
-			void operator/=(const Number& other);
-			void operator%=(const Number& other);
-			void operator&=(const Number& other);
-			void operator^=(const Number& other);
-			void operator<<=(const Number& other);
-			void operator>>=(const Number& other);
-			bool operator<(const Number& other);
-			bool operator<=(const Number& other);
-			bool operator>(const Number& other);
-			bool operator>=(const Number& other);
-			bool operator!() { return false; }
-			Number operator~() { return Number(~realDouble); }
-
-			friend std::ostream& operator<<(std::ostream&, Number&);
-
-			static bool isInteger(const Number& n) {
-				return false; // TODO
-			}
-
-			// toExponential: not implemented
-
-			// toFixed: not implemented
-
-			// toLocaleString: not implemented
-
-			// toPrecision: not implemented
-
-			String toString() { return String(""); }
-
-			// valueOf: not implemented
-
-			int toInt()         { return (int) realDouble; }
-			int toUnsignedInt() { return (unsigned int) realDouble; }
-			int toFloat()       { return (float) realDouble; }
-			int toDouble()      { return realDouble; }
-
-	}
 
 	class String {
 
@@ -252,8 +148,8 @@ namespace JSCPP {
 			String trimRight() {
 				if (isEmpty()) return "";
 				unsigned int i;
-        for (i = size() - 1; (i > 0) && (charAt(i) == ' '); i --);
-        return realString.substr(0, i + 1);
+				for (i = size() - 1; (i > 0) && (charAt(i) == ' '); i --);
+				return realString.substr(0, i + 1);
 			}
 
 			// valueOf: not implemented
@@ -273,71 +169,6 @@ namespace JSCPP {
 
 	std::ostream& operator<<(std::ostream& out, String& str) { out << str.realString; }
 
-	class MathConstructor {
-
-		public:
-
-			static const double E = 2.718281828459045;
-			static const double LN2 = 0.6931471805599453;
-			static const double LN10 = 2.302585092994046;
-			static const double LOG2E = 1.4426950408889634;
-			static const double LOG10E = 0.4342944819032518;
-			static const double PI = 3.141592653589793;
-			static const double SQRT1_2 = 0.7071067811865476;
-			static const double SQRT2 = 1.4142135623730951;
-
-			// TODO: use cmath
-			// http://www.cplusplus.com/reference/cmath/
-
-			// TODO: abs
-
-			// TODO: acos
-			// TODO: asin
-			// TODO: atan
-			// TODO: atan2
-
-			// TODO: ceil
-
-			// TODO: sin, cos, tan
-
-			// TODO: exp
-
-			// TODO: floor
-
-			// TODO: log
-
-			// TODO: max
-			// TODO: min
-
-			// TODO: pow
-
-			// TODO: random
-
-			// TODO: round
-
-			// TODO: sqrt
-
-	};
-
-	MathConstructor Math;
-
-	class ConsoleContructor {
-
-		public:
-
-			// TODO
-			void log();
-			void info();
-			void warn();
-			void error();
-
-			void assert(bool condition) { if (!condition) error("Assertion failed"); }
-			void assert(bool condition, const String& msg) { if (!condition) error("Assertion failed: " + msg); }
-
-	};
-
-	ConsoleContructor console;
-
-}
+};
 
 #endif

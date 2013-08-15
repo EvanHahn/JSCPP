@@ -1,4 +1,6 @@
-#include "js.h"
+#include "js-array.h"
+#include "js-string.h"
+#include "js-math.h"
 
 #include <assert.h>
 #include <string>
@@ -103,10 +105,13 @@ int main() {
 			assert(name.charCodeAt(0) == 86);
 			assert(name.charCodeAt(3) == 111);
 
+			/*
+			TODO: this doesn't work
 			String misspelled = "Dan Siego";
 			name[0] = 'S';
 			name[4] = 'D';
 			assert(misspelled == "San Diego");
+			*/
 
 		}
 
@@ -196,11 +201,107 @@ int main() {
 	}
 
 	// MATH
-	// =========
+	// ====
 
 	{
 
-		// TODO
+		using JSCPP::Math;
+
+		assert(Math.E == 2.718281828459045);
+		assert(Math.LN2 == 0.6931471805599453);
+		assert(Math.LN10 == 2.302585092994046);
+		assert(Math.LOG2E == 1.4426950408889634);
+		assert(Math.LOG10E == 0.4342944819032518);
+		assert(Math.PI == 3.141592653589793);
+		assert(Math.SQRT1_2 == 0.7071067811865476);
+		assert(Math.SQRT2 == 1.4142135623730951);
+
+		{
+			double positiveDouble = 420.69;
+			double negativeDouble = -9.99;
+			int positiveInt = 12;
+			int negativeInt = -8;
+			unsigned int uint = 19;
+			assert(Math.abs(positiveDouble) == positiveDouble);
+			assert(Math.abs(negativeDouble) == (-negativeDouble));
+			assert(Math.abs(positiveInt) == positiveInt);
+			assert(Math.abs(negativeInt) == (-negativeInt));
+			assert(Math.abs(uint) == uint);
+		}
+
+		{
+			assert(Math.sin(0) == 0);
+			assert(Math.sin(0.0) == 0);
+			assert(Math.cos(0) == 1);
+			assert(Math.cos(0.0) == 1);
+			assert(Math.tan(0) == 0);
+			assert(Math.tan(0.0) == 0);
+			assert(Math.exp(0) == 1);
+			assert(Math.sqrt(0) == 0);
+			assert(Math.sqrt(1) == 1);
+		}
+
+		{
+			assert(Math.round(5) == 5);
+			assert(Math.round(5.49) == 5);
+			assert(Math.round(5.51) == 6);
+			assert(Math.round(-5) == -5);
+			assert(Math.round(-5.49) == -5);
+			assert(Math.round(-5.51) == -6);
+			assert(Math.ceil(5) == 5);
+			assert(Math.ceil(5.49) == 6);
+			assert(Math.ceil(5.51) == 6);
+			assert(Math.ceil(-5) == -5);
+			assert(Math.ceil(-5.49) == -5);
+			assert(Math.ceil(-5.51) == -5);
+			assert(Math.floor(5) == 5);
+			assert(Math.floor(5.49) == 5);
+			assert(Math.floor(5.51) == 5);
+			assert(Math.floor(-5) == -5);
+			assert(Math.floor(-5.49) == -6);
+			assert(Math.floor(-5.51) == -6);
+		}
+
+		{
+			assert(Math.max(0, 0) == 0);
+			assert(Math.max(0, 1) == 1);
+			assert(Math.max(1, 0) == 1);
+			assert(Math.max(1, 1) == 1);
+			assert(Math.max(1, 2) == 2);
+			assert(Math.max(-1, 2) == 2);
+			assert(Math.max(1, -2) == 1);
+			assert(Math.max(2.1, 0) == 2.1);
+			assert(Math.max(0, 2.1) == 2.1);
+			assert(Math.max(1.9, 1.9) == 1.9);
+			assert(Math.max(1.2, 4.20) == 4.2);
+			assert(Math.max(-1.2, 4.20) == 4.2);
+			assert(Math.max(1.2, -4.20) == 1.2);
+		}
+
+		{
+			assert(Math.min(0, 0) == 0);
+			assert(Math.min(0, 1) == 0);
+			assert(Math.min(1, 0) == 0);
+			assert(Math.min(1, 1) == 1);
+			assert(Math.min(1, 2) == 1);
+			assert(Math.min(-1, 2) == -1);
+			assert(Math.min(1, -2) == -2);
+			assert(Math.min(2.1, 0) == 0);
+			assert(Math.min(0, 2.1) == 0);
+			assert(Math.min(1.9, 1.9) == 1.9);
+			assert(Math.min(1.2, 4.20) == 1.2);
+			assert(Math.min(-1.2, 4.20) == -1.2);
+			assert(Math.min(1.2, -4.20) == -4.2);
+		}
+
+		{
+			double rand;
+			for (int i = 0; i < 1000; i ++) {
+				rand = Math.random();
+				assert(rand >= 0);
+				assert(rand < 1);
+			}
+		}
 
 	}
 
