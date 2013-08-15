@@ -36,6 +36,7 @@ namespace JSCPP {
 
 	template <class T> std::ostream& operator<<(std::ostream& out, Array<T>& arr) {
 		out << '[' << arr.join(", ") << ']';
+		return out;
 	}
 
 };
