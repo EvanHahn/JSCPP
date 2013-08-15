@@ -13,7 +13,7 @@ Goals
 -----
 
 - replicate significant parts of the JavaScript standard library in C++ for familiarity
-- ignore regexes and functional stuff (no `forEach`, for example)
+- ignore regexes and functional stuff (no `forEach`, for example) -- we're not trying to turn C++ into JavaScript
 - performance is not important
 - aimed at small projects for school, not for your big C++ project
 - don't overload `==` to be like `==` in JavaScript; make it like `===`
