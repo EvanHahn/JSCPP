@@ -17,6 +17,7 @@ Goals
 - performance is not important
 - aimed at small projects for school, not for your big C++ project
 - don't overload `==` to be like `==` in JavaScript; make it like `===`
+- each component should be independent -- Array.join shouldn't return my string, it should return an std::string
 
 Pull requests are welcome!
 
