@@ -56,7 +56,7 @@ from JavaScript
 - `charAt(index)`
 - `charCodeAt(index)`
 - `concat(string)`
-- `contains(string)` (strings only
+- `contains(string)` (strings only)
 - `endsWith(string)` (strings only)
 - `indexOf(string)` (strings only)
 - `lastIndexOf(string)` (strings only)
