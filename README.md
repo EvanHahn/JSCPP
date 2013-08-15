@@ -28,25 +28,26 @@ Supported stuff
 from JavaScript
 
 - `concat(Array)` (only takes an array, unlike JavaScript)
-- `indexOf(item)`
-- `join([string])`
-- `lastIndexOf(item)`
+- `indexOf(item)` (*TODO*)
+- `join([string])` (*TODO*)
+- `lastIndexOf(item)` (*TODO*)
 - `length()` (method, not a property)
-- `pop()`
-- `push(item)` (only takes one argument, unlike JavaScript)
-- `reverse()`
-- `shift()`
-- `slice()`
-- `sort`
+- `pop()` (*TODO*)
+- `push(item)` (*TODO*, only takes one argument, unlike JavaScript)
+- `reverse()` (*TODO*)
+- `shift()` (*TODO*)
+- `slice()` (*TODO*)
+- `sort()` (*TODO*)
 - `splice(index, howMany)` (always takes two arguments, unlike JavaScript)
-- `toString()`
-- `unshift(item)` (only takes one argument, unlike JavaScript)
+- `toString()` (*TODO*)
+- `unshift(item)` (*TODO*, only takes one argument, unlike JavaScript)
 
 new stuff
 
-  - `contains(item)`
-  - `isEmpty()`
-  - `size()` (alias of `length`)
+- `isEmpty()` (alias of `length() == 0`)
+- `first()` (get the first element)
+- `last()` (get the last element)
+- `size()` (alias of `length`)
 
 ### String
 
@@ -63,10 +64,10 @@ from JavaScript
 - `length()` (method, not a property)
 - `replace(original, new)` (strings only. Try `replaceAll` for global replace)
 - `slice(beginSlice, [endSlice])`
-- `split` (returns a JSCPP::Array)
+- `split` (*TODO*)
 - `startsWith(string)`
-- `substr`
-- `substring`
+- `substr` (*TODO*)
+- `substring` (*TODO*)
 - `toLowerCase()`
 - `toUpperCase()`
 - `trim()`
