@@ -1,6 +1,8 @@
 JSCPP
 =====
 
+<img src="http://evanhahn.com/wp-content/uploads/2013/09/jscpp-150x150.png" align="right">
+
 I'm a JavaScript programmer. I *hate* C++. Sadly, I have to use it for school. I come from a world of "performance be damned" and high-level APIs.
 
 [I wanted to like C++](http://programmers.stackexchange.com/questions/196369/how-can-i-learn-to-like-c), I really did.
