@@ -5,9 +5,9 @@ I'm a JavaScript programmer. I *hate* C++. Sadly, I have to use it for school. I
 
 [I wanted to like C++](http://programmers.stackexchange.com/questions/196369/how-can-i-learn-to-like-c), I really did.
 
-After three years of dealing with C++, I was fed up. Before returning for my final semesters, I decided to write a library that made C++ a little more familiar. **This is C++ for the JavaScript programmer.**
-
 Because I'm not allowed to use code I didn't write, I couldn't use things like [Boost](http://www.boost.org/) -- I had to roll my own.
+
+After three years of dealing with C++, I was fed up. Before returning for my final semesters, I decided to write a library that made C++ a little more familiar.
 
 Goals
 -----
