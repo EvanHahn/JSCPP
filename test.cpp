@@ -90,6 +90,27 @@ int main() {
 
 		}
 
+		{ // Reverse an array
+			// ----------------
+
+			Array<int> arr;
+
+			arr.push(12);
+			arr.push(420);
+			arr.push(666);
+			arr.push(420);
+			arr.push(666);
+
+			arr.reverse();
+
+			assert(arr[0] == 666);
+			assert(arr[1] == 420);
+			assert(arr[2] == 666);
+			assert(arr[3] == 420);
+			assert(arr[4] == 12);
+
+		}
+
 		{ // Turn the array into other stuff
 		  // -------------------------------
 

@@ -54,6 +54,18 @@ namespace JSCPP {
 				return result;
 			}
 
+			void reverse() {
+				unsigned int count = size();
+				T temp;
+				unsigned int otherIndex;
+				for (unsigned int i = 0; i < (count / 2); i ++) {
+					otherIndex = count - i - 1;
+					temp = realVector[i];
+					realVector[i] = realVector[otherIndex];
+					realVector[otherIndex] = temp;
+				}
+			}
+
 			std::string join(std::string sep) {
 				std::stringstream ss;
 				for (unsigned int i = 0; i < size(); i ++) {

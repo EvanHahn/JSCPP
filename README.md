@@ -35,7 +35,7 @@ from JavaScript
 - `length()` (method, not a property)
 - `pop()`
 - `push(item)` (only takes one argument, unlike JavaScript)
-- `reverse()` (*TODO*)
+- `reverse()` (doesn't return the array, unlike JavaScript)
 - `shift()`
 - `slice()` (*TODO*)
 - `sort()` (*TODO*)
