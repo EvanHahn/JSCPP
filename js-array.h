@@ -32,7 +32,7 @@ namespace JSCPP {
 			}
 
 			int lastIndexOf(T el) {
-				for (unsigned int i = size() - 1; i >= 0; i --) {
+				for (int i = size() - 1; i >= 0; i --) {
 					if (at(i) == el)
 						return i;
 				}
