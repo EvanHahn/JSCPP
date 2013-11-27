@@ -47,9 +47,9 @@ from JavaScript
 
 new stuff
 
-- `isEmpty()` (alias of `length() == 0`)
 - `contains(item)` (alias of `indexOf(item) != -1`)
 - `first()` (get the first element)
+- `isEmpty()` (alias of `length() == 0`)
 - `last()` (get the last element)
 - `size()` (alias of `length`)
 - `toStdVector()` (returns a std::vector)
@@ -95,13 +95,13 @@ from JavaScript
 - `abs(value)`
 - `acos(value)`, `asin(value)`, `atan(value)`, `atan2(x, y)`
 - `ceil(value)`, `floor(value)`
-- `sin(value)`, `cos(value)`, `tan(value)`
 - `exp(value)`
-- `round(value)`
 - `log(value)`
 - `max(a, b)`, `min(a, b)` (only takes 2 arguments; not 100% compliant)
 - `pow(base, exponent)`
 - `random()`
+- `round(value)`
+- `sin(value)`, `cos(value)`, `tan(value)`
 - `sqrt(value)`
 
 new stuff
