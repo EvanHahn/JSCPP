@@ -27,7 +27,7 @@ namespace JSCPP {
 				randomCalled = false;
 			}
 
-			double abs(double d) { return std::abs(d); } 
+			double abs(double d) { return std::abs(d); }
 
 			double acos(double d) { return std::acos(d); }
 			double asin(double d) { return std::asin(d); }
