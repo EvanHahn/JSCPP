@@ -14,18 +14,26 @@ namespace JSCPP {
 
 		public:
 
-			static const double E = 2.718281828459045;
-			static const double LN2 = 0.6931471805599453;
-			static const double LN10 = 2.302585092994046;
-			static const double LOG2E = 1.4426950408889634;
-			static const double LOG10E = 0.4342944819032518;
-			static const double PI = 3.141592653589793;
-			static const double SQRT1_2 = 0.7071067811865476;
-			static const double SQRT2 = 1.4142135623730951;
+			const double E;
+			const double LN2;
+			const double LN10;
+			const double LOG2E;
+			const double LOG10E;
+			const double PI;
+			const double SQRT1_2;
+			const double SQRT2;
 
-			MathConstructor() {
-				randomCalled = false;
-			}
+			MathConstructor() :
+				randomCalled(false),
+				E(2.718281828459045),
+				LN2(0.6931471805599453),
+				LN10(2.302585092994046),
+				LOG2E(1.4426950408889634),
+				LOG10E(0.4342944819032518),
+				PI(3.141592653589793),
+				SQRT1_2(0.7071067811865476),
+				SQRT2(1.4142135623730951)
+				{}
 
 			double abs(double d) { return std::abs(d); }
 
