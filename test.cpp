@@ -1,7 +1,7 @@
-#include "js-array.h"
-#include "js-string.h"
-#include "js-math.h"
-#include "js-util.h"
+#include "js-array.hpp"
+#include "js-string.hpp"
+#include "js-math.hpp"
+#include "js-util.hpp"
 
 #include <assert.h>
 #include <string>
