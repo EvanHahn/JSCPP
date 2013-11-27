@@ -1,5 +1,5 @@
 #!/bin/bash
 
-g++ test.cpp -o temp.out
+g++ test.cpp -Wall -o temp.out
 ./temp.out
 rm temp.out
