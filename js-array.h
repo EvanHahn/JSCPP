@@ -13,7 +13,12 @@ namespace JSCPP {
 
 		private:
 			std::vector<T> realVector;
-			T at(const unsigned int i) { return (i < size()) ? realVector[i] : NULL; }
+			T at(const unsigned int i) {
+				if (i < size())
+					return realVector[i];
+				else
+					return false;
+			}
 
 		public:
 
