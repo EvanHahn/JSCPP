@@ -57,7 +57,10 @@ namespace JSCPP {
 				}
 			}
 
-			// fromCharCode: not implemented
+			static String fromCharCode(const unsigned int c) {
+				String result = c;
+				return result;
+			}
 
 			int indexOf(const String& other) {
 				std::size_t found = realString.find(other.realString);

@@ -165,6 +165,8 @@ int main() {
 			assert(letter == "X");
 			assert(letter == 'X');
 
+			assert(String::fromCharCode(65) == "A");
+
 		}
 
 		{ // Converting to std::string

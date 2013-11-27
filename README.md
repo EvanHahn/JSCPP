@@ -3,9 +3,7 @@ JSCPP
 
 <img src="http://evanhahn.com/wp-content/uploads/2013/09/jscpp-150x150.png" align="right">
 
-I'm a JavaScript programmer. I *hate* C++. Sadly, I have to use it for school. I come from a world of "performance be damned" and high-level APIs.
-
-[I wanted to like C++](http://programmers.stackexchange.com/questions/196369/how-can-i-learn-to-like-c), I really did.
+I'm a JavaScript programmer. I don't like C++ (especially when I can't use C++11). Sadly, I have to use it for school. I come from a world of "performance be damned" and high-level APIs, not a C-like background. [I wanted to like C++](http://programmers.stackexchange.com/questions/196369/how-can-i-learn-to-like-c), I really did.
 
 Because I'm not allowed to use code I didn't write, I couldn't use things like [Boost](http://www.boost.org/) -- I had to roll my own.
 
@@ -64,6 +62,7 @@ from JavaScript
 - `concat(string)`
 - `contains(string)` (strings only)
 - `endsWith(string)` (strings only)
+- `String::fromCharCode(number)` (only takes one argument, unlike JavaScript)
 - `indexOf(string)` (strings only)
 - `lastIndexOf(string)` (strings only)
 - `length()` (method, not a property)
